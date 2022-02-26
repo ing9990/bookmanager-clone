@@ -1,0 +1,3 @@
+- Book Service에서 버전 오류가 나서 버전 고치고 git clone함.
+
+clone git 주소 : https://github.com/freeism/fast-campus-jpa.git
