@@ -20,17 +20,16 @@ class BookServiceTest {
     @Autowired
     private AuthorRepository authorRepository;
 
-    @Test
-    void transactionTest() {
-        try {
-            bookService.putBookAndAuthor();
-        } catch (RuntimeException e) {
-            System.out.println(">>> " + e.getMessage());
-        }
-
-        System.out.println("books : " + bookRepository.findAll());
-        System.out.println("authors : " + authorRepository.findAll());
-    }
+   @Test
+   void txTest(){
+       try{
+           bookService.putBookAndAuthor();
+       }catch (RuntimeException e){
+           System.out.println(">>> " +e.getMessage());
+       }
+       System.out.println("books: " + bookRepository.findAll());
+       System.out.println("authors: "+ authorRepository.findAll());
+   }
 
     @Test
     void isolationTest() {
