@@ -32,6 +32,7 @@ public class BookService {
         try {
             authorService.putAuthor();
         } catch (RuntimeException e) {
+            System.out.println("helo world");
         }
 
         throw new RuntimeException("오류가 발생하였습니다. transaction은 어떻게 될까요?");
